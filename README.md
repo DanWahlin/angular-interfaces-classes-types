@@ -1,4 +1,6 @@
-# MyProject
+# Angular Interfaces, Types, and Classes
+
+[Edit on StackBlitz](https://stackblitz.com/edit/angular-interfaces-classes-types)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
