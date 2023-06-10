@@ -1,0 +1,33 @@
+{
+  "name": "angular-rxjs-restful-services",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^16.0.2",
+    "@angular/common": "^16.0.2",
+    "@angular/compiler": "^16.0.2",
+    "@angular/core": "^16.0.2",
+    "@angular/forms": "^16.0.2",
+    "@angular/platform-browser": "^16.0.2",
+    "@angular/platform-browser-dynamic": "^16.0.2",
+    "@angular/router": "^16.0.2",
+    "rxjs": "~7.8.1",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.0.2",
+    "@angular/cli": "^16.0.2",
+    "@angular/compiler-cli": "^16.0.2",
+    "ts-node": "~7.0.0",
+    "typescript": "~4.9.5"
+  }
+}

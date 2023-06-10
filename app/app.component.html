@@ -1,0 +1,26 @@
+<h1>Interfaces, Classes, and Types</h1>
+
+This example shows using interfaces and types in different ways.
+
+<h2>Characters</h2>
+<div *ngIf="(charactersAndPlanets$ | async) as charactersAndPlanets">
+  <ul>
+    <li *ngFor="let char of charactersAndPlanets?.characters">
+      {{ char.name }}
+    </li>
+  </ul>
+
+  <h2>Planets</h2>
+  <ul>
+    <li *ngFor="let planet of charactersAndPlanets?.planets">
+      {{ planet.name }}
+    </li>
+  </ul>
+</div>
+
+<h2>Settings</h2>
+Theme: {{ theme[userSettings.theme] }}
+<br />
+Sidebar Visible: {{ userSettings.sidebarVisible }}
+<br />
+Sidebar Position: {{ sidebarPosition[userSettings.sidebarPosition] }}
