@@ -6,13 +6,13 @@ import { Theme, SidebarPosition } from './shared/enums';
 import { SettingsService } from './core/settings.service';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit  {
 
-  charactersAndPlanets$: Observable<CharactersPlanets>;
+  charactersAndPlanets$: Observable<CharactersPlanets> = new Observable<CharactersPlanets>();
   userSettings: Readonly<Settings> =
     { theme: Theme.Dark, sidebarVisible: true, sidebarPosition: SidebarPosition.Left };
   theme = Theme;

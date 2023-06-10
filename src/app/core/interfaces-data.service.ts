@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { forkJoin, of, from, Observable } from 'rxjs';
-import { tap, map, switchMap, catchError, mergeMap, toArray } from 'rxjs/operators';
+import { forkJoin, of, Observable } from 'rxjs';
+import { tap, map, catchError } from 'rxjs/operators';
 import { SwapiResult, Character, Planet, CharactersPlanets } from '../shared/interfaces';
 
 @Injectable({ providedIn: 'root' })
@@ -42,13 +42,13 @@ export class InterfacesDataService {
   }
 
   getCharactersAndPlanets() : Observable<CharactersPlanets> {
-    return forkJoin(
-      this.getCharacters(),
-      this.getPlanets()
-    )
+    return forkJoin({
+      characters: this.getCharacters(),
+      planets: this.getPlanets()
+  })
     .pipe(
       map((res) => {
-        return { characters: res[0], planets: res[1]}
+        return { characters: res.characters, planets: res.planets }
       }),
       catchError(error => of(error))
     );

@@ -1,7 +1,7 @@
 import { Theme, SidebarPosition } from "./enums";
 
-// Created using https://www.jsontots.com
-// based on data from https://swapi.co
+// Created using https://quicktype.io/typescript
+// based on data from https://swapi.dev
 export interface SwapiResult<T> {
   count: number;
   next?: string;
@@ -56,7 +56,7 @@ export interface Settings {
   sidebarPosition: SidebarPosition;
 }
 
-export type UpdateCharacterStatus {
+export type UpdateCharacterStatus = {
   status: boolean;
   character: Character;
 }
